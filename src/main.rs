@@ -28,9 +28,12 @@ fn main() -> anyhow::Result<()> {
     //
 
     // must have chroot cap
-    caps::has_cap(None, CapSet::Effective, Capability::CAP_SYS_CHROOT)?;
+    if !caps::has_cap(None, CapSet::Effective, Capability::CAP_SYS_CHROOT)? {
+        anyhow::bail!("cap_sys_chroot=ep is not present");
+    }
 
     // create directory tree
+    // todo;; extract a filesystem package instead?
     for dir in cfg.tree {
         add_dir(opts.root_dir.join(dir))?;
     }
