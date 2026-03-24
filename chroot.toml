@@ -1,0 +1,24 @@
+exec = [
+    "bash",
+    "sh",
+    "ls",
+    "echo",
+    "tar",
+    "gzip",
+    "touch",
+    "strace",
+    "cp",
+    "mv",
+    "which",
+]
+
+tree = [
+    "bin",
+    "lib64",
+    "lib/x86_64-linux-gnu",
+    "usr/bin",
+    "usr/local/bin",
+    "home",
+    "opt",
+    "tmp",
+]

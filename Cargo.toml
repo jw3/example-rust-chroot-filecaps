@@ -5,8 +5,10 @@ edition = "2024"
 
 [dependencies]
 anyhow = "1"
-clap = { version =  "4.6.0", features = ["derive"] }
+clap = { version = "4.6.0", features = ["derive"] }
 caps = "0.5.6"
 libc = "0.2"
-nix = { version = "0.31", features = ["fs", "sched"]}
+nix = { version = "0.31", features = ["fs", "sched"] }
 which = "8.0.2"
+serde = { version = "1.0.228", features = ["derive"] }
+toml = { version = "0.9.8", features = ["serde"] }
